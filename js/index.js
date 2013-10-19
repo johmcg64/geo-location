@@ -35,6 +35,31 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
+    
+    function getGeoLocation() {
+    	
+    	
+    		var onSuccess = function(position) {
+    navigator.geolocation.alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n',function(){});
+    }
+
+// onError Callback receives a PositionError object
+//
+    function onError(error) {
+         navigator.geolocation.alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n',function(){});
+    }
+    	
+
+       navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+    },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -52,29 +77,9 @@ var app = {
 };
 
 
-		var onSuccess = function(position) {
-    alert('Latitude: '          + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Accuracy: '          + position.coords.accuracy          + '\n' +
-          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          'Heading: '           + position.coords.heading           + '\n' +
-          'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n',alertDismissed,"Geo Location","Dismiss the dialog");
-};
+	
 
-// onError Callback receives a PositionError object
-//
-function onError(error) {
-    alert('code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n',alertDismissed,"Error","Dismiss the dialog");
-}
 
-function getGeoLocation() {
-
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
-}
 
 /*
 navigator.notification.alert(
