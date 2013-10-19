@@ -44,12 +44,16 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 		
-		function alertDismissed() {
-    // do something
-}
 		
+       console.log('Received Event: ' + id);
+    }
+    
+    
+};
+
+
 		var onSuccess = function(position) {
-    navigator.notification.alert('Latitude: '          + position.coords.latitude          + '\n' +
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
           'Accuracy: '          + position.coords.accuracy          + '\n' +
@@ -62,19 +66,15 @@ var app = {
 // onError Callback receives a PositionError object
 //
 function onError(error) {
-    navigator.notification.alert('code: '    + error.code    + '\n' +
+    alert('code: '    + error.code    + '\n' +
           'message: ' + error.message + '\n',alertDismissed,"Error","Dismiss the dialog");
 }
 
+function getGeoLocation() {
+
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-
-
-
-
-        console.log('Received Event: ' + id);
-    }
-};
+}
 
 /*
 navigator.notification.alert(
