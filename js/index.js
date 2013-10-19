@@ -36,11 +36,11 @@ var app = {
         app.receivedEvent('deviceready');
     },
     
-    function getGeoLocation() {
+    getGeoLocation: function() {
     	
     	
     		var onSuccess = function(position) {
-    navigator.geolocation.alert('Latitude: '          + position.coords.latitude          + '\n' +
+          navigator.notification.alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
           'Altitude: '          + position.coords.altitude          + '\n' +
           'Accuracy: '          + position.coords.accuracy          + '\n' +
@@ -52,13 +52,14 @@ var app = {
 
 // onError Callback receives a PositionError object
 //
-    function onError(error) {
-         navigator.geolocation.alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n',function(){});
-    }
+       function onError(error) {
+         navigator.notification.alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n',function(){});
+       }
     	
 
        navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
+   
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
