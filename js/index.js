@@ -38,9 +38,9 @@ var app = {
     
     getGeoLocation: function() {
     	
-    	navigator.notification.alert("Hi John",function(){},"title","Done")
+    	//navigator.notification.alert("Hi John",function(){},"title","Done")
     	
-    	/*
+    	
     		var onSuccess = function(position) {
           navigator.notification.alert('Latitude: '          + position.coords.latitude          + '\n' +
           'Longitude: '         + position.coords.longitude         + '\n' +
@@ -49,19 +49,19 @@ var app = {
           'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
           'Heading: '           + position.coords.heading           + '\n' +
           'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n',function(){});
+          'Timestamp: '         + position.timestamp                + '\n',function(){},"title","Done");
     }
 
 // onError Callback receives a PositionError object
 //
        function onError(error) {
-         navigator.notification.alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n',function(){});
+         navigator.notification.alert('code: '    + error.code    + '\n' +'message: ' + error.message + '\n',function(){},"title","Done");
        }
     	
 
        navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-   */
+   
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
