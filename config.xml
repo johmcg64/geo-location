@@ -21,6 +21,7 @@
         The "device" permission is required for the 'deviceready' event.
     -->
     <feature name="http://api.phonegap.com/1.0/device" />
+    
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
     
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -30,8 +31,6 @@
     <plugins>
         <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
     </plugins>
-
-
 
     <!--
         If you do not want any permissions to be added to your app, add the
@@ -107,3 +106,4 @@
     -->
 
 </widget>
+
