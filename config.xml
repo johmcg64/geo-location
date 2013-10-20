@@ -27,8 +27,9 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     
-    <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
-
+    <plugins>
+        <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+    </plugins>
 
 
 
