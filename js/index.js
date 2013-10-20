@@ -60,7 +60,10 @@ function onError(error) {
           'message: ' + error.message + '\n');
 }
 
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
+ var options = { enableHighAccuracy: true };
+
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 
 
    
