@@ -22,11 +22,11 @@
     -->
     <feature name="http://api.phonegap.com/1.0/device" />
     
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
     
-    
+    <plugins>
+        <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+    </plugins>
 
     <!--
         If you do not want any permissions to be added to your app, add the
