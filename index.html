@@ -64,24 +64,34 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
 
-
-
-
+<style>
+.circular {
+	width: 65px;
+	height: 65px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	background: url(http://runmyline.com/b/white.png) no-repeat;
+	padding-top:10px;
+	}
+</style>
 
 </head>
 <body>
 
 
-<div class="container" style="background-color:#c3c1c2; height:400px;">
+<div class="container" style="background-color:#c3c1c2; height:400px; padding-top:15px; padding-right:20px; padding-left:15px; padding-left:15px;">
 
 
 
-<div class="row">
+<div class="row" style="padding-left:50px; padding-right:10px;">
 
-<div class="col-xs-12 col-sm-12 col-md-12" style="background-color:#656364; height:74px;">
-<div class="row">
-<div class="col-xs-2 col-sm-2 col-md-2">
-<img src="" alt="circle picture image"></img>
+
+
+<div class="col-xs-12 col-sm-12 col-md-12" style="background-color:#656364; height:66px;">
+<div class="row" style="margin-left:-62px;">
+<div class="col-xs-1 col-sm-1 col-md-1">
+<div class="circular"></div>
 </div>
 
 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -100,8 +110,8 @@
 
 
 <div class="row">
-<div class="col-xs-12 col-sm-12 col-md-11">
-MAP|LIST|CARD
+<div class="col-xs-11 col-sm-11 col-md-11" style="padding-top:5px; padding-bottom:5px;">
+<a href="#" onclick="alert('Display the MAP.')" style="color:black;text-decoration:none;">MAP</a> | <a href="#" onclick="alert('Display the LIST.')"  style="color:black;text-decoration:none;">LIST</a> | <a href="#" onclick="alert('Display the CARD.')"  style="color:black;text-decoration:none;">CARD</a>
 </div>
 <div class="col-xs-1 col-sm-1 col-md-1">
 settings
@@ -111,8 +121,8 @@ settings
 
 
 
-<div class="row" style="background-color:#656565">
-<div class="col-xs-12 col-sm-12 col-md-12"  style="height:200px; border:1px solid black">
+<div class="row" style="background-color:#656565; margin-left:0px; margin-bottom:10px;">
+<div class="col-xs-12 col-sm-12 col-md-12"  style="height:300px; border:1px solid black;">
 content
 </div>
 </div>
