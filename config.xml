@@ -6,14 +6,14 @@
         id        = "com.phonegap.hello-world"
         version   = "1.0.0">
 
-    <name>Hello World</name>
+    <name>Bounce</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Bounce
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://phonegap.com" email="elan@exploremedia360.com">
+        Explorer Media LLC Team
     </author>
 
     <!--
@@ -33,7 +33,9 @@
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
+    <!--
     <preference name="permissions"                value="none"/>
+    -->
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="2.9.0" />          <!-- all: current version of PhoneGap -->
